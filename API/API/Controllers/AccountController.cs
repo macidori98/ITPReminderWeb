@@ -54,7 +54,7 @@ namespace API.Controllers
       };
     }
 
-    [HttpGet("login")]
+    [HttpPost("login")]
     public async Task<ActionResult<UserDto>> Login (LoginDto loginDto)
     {
       var user = await this.context.Users
