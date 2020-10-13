@@ -37,6 +37,7 @@ namespace API
         options.UseSqlite(this.config.GetConnectionString("DefaultConnection"));
       });
       services.AddControllers();
+      services.AddCors();
       services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer( options =>
         {
@@ -61,6 +62,8 @@ namespace API
       app.UseHttpsRedirection();
 
       app.UseRouting();
+
+      app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
       app.UseAuthentication();
       

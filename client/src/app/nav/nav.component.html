@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" routerLink='/' routerLinkActive='active'>ITP Reminder</a>
+
+        <ul class="navbar-nav mr-auto">
+            <ng-container>
+                <li class="nav-item">
+                    <a class="nav-link"  routerLink='/home' routerLinkActive='active'>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  routerLink='/addnewcar' routerLinkActive='active'>Add new car</a>
+                </li>
+            </ng-container>
+        </ul>
+
+        <div class="dropdown" *ngIf="true" dropdown>
+            <a class="dropdown-toggle text-light" dropdownToggle>
+                Welcome 
+            </a>
+            <div class="dropdown-menu mt-3" *dropdownMenu>
+                <a class="dropdown-item">Edit profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" >
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
