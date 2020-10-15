@@ -8,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AddNewCarComponent } from './add-new-car/add-new-car.component';
+import { FormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AddNewCarComponent } from './add-new-car/add-new-car.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    BsDropdownModule.forRoot()//got some services or components
   ],
   providers: [],
   bootstrap: [AppComponent]
