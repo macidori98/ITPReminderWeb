@@ -10,13 +10,18 @@ import { HomeComponent } from './home/home.component';
 import { AddNewCarComponent } from './add-new-car/add-new-car.component';
 import { FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { RegisterComponent } from './register/register.component';
+import { ToastrModule } from 'ngx-toastr';
+import { CarListComponent } from './car-list/car-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    AddNewCarComponent
+    AddNewCarComponent,
+    RegisterComponent,
+    CarListComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,10 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    BsDropdownModule.forRoot()//got some services or components
+    BsDropdownModule.forRoot(),//got some services or components
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
